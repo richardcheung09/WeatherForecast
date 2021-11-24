@@ -1,0 +1,128 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form asp-controller="weatherforecast" asp-action="GetForecast">
+    <div class="row">
+        <div class="">
+            <select id="city" class="form-control col-12 w-100" asp-for="city"></select>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <table id="tbl" class="table table-bordered" style="width: 100%">
+        @*<thead>
+            <tr>
+                <th>Date</th>
+                <th>Weather</th>
+                <th>Morning Temp</th>
+                <th>Day Temp</th>
+                <th>Night Temp</th>
+            </tr>
+        </thead>
+
+        @foreach (var f in Model.forecast.daily)
+        {
+            //// user-specified time zone
+            //TimeZoneInfo southPole =
+            //    TimeZoneInfo.FindSystemTimeZoneById(Model.forecast.timezone);
+
+            //// an UTC DateTime
+            ////DateTime utcTime = new DateTime(2007, 07, 12, 06, 32, 00, DateTimeKind.Utc);
+            //DateTime utcTime = DateTime.UtcNow;
+
+            //// DateTime with offset
+            //DateTimeOffset dateAndOffset =
+            //    new DateTimeOffset(utcTime, southPole.GetUtcOffset(utcTime));
+
+            ////Console.WriteLine(dateAndOffset);
+
+            long unixDate = f.Date;
+            DateTime start = DateTime.Now;
+            DateTime date = start.AddSeconds(unixDate).ToUniversalTime();
+            var newDate = date.AddDays(1);
+                
+            <tbody>
+                <tr>
+                    <td>@newDate.ToLongTimeString()</td>
+                    <td>@f.Weather.FirstOrDefault().description</td>
+                    <td>@f.temp.morn</td>
+                    <td>@f.temp.day</td>
+                    <td>@f.temp.night</td>
+                </tr>
+            </tbody>
+        }*@
+
+    </table>
+</form>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#city').val('@Model.city').trigger('change');
+
+            $('#tbl').DataTable({
+                dom: 't',
+                ajax: {
+                    url: 'https://localhost:44314/weatherforecast?city=' + '@Model.city',
+                    type: "GET",
+                    dataSrc: 'daily',
+                    //data: function (d) {
+                    //    d.city = $('input[type="text"].search').val();
+                    //},
+                },
+                columns: [
+                    { "data": "date", title: 'Date' },
+                    { "data": "weather.0.description", title: 'Forecast' },
+                    { "data": "temp.morn", title: 'Morning Temp'},
+                    { "data": "temp.day", title: 'Noon Temp' },
+                    { "data": "temp.night", title: 'Night Temp' }
+                ]
+            });
+
+            $.getJSON("https://countriesnow.space/api/v0.1/countries", function (json) {
+            }).done(function (json) {
+                var countries = [''];
+
+                $.each(json.data, function (index, loc) {
+                    var cities = [];
+
+                    $.each(loc.cities, function (index, city) {
+                        cities.push({
+                            'id': city,
+                            'text': city,
+                        });
+                    });
+
+                    countries.push({
+                        'id': loc.country,
+                        'text': loc.country,
+                        'children': cities,
+                    });
+                });
+
+                //Populate location list and cache it
+                $('#city').select2({
+                    placeholder: 'Search country / city',
+                    width: 'style',
+                    dropdownAutoWidth: true,
+                    minimumResultsForSearch: 10,
+                    minimumInputLength: 4,
+
+                    data: countries
+                })
+                    .val('@Model.city')
+                    .trigger('change');
+
+                $('#city').on('change', function () {
+                    window.location.href = "/Index?c=" + $('#city').val();
+                });
+            });
+        });
+    </script>
+}

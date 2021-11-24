@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsourcing.SportChamps.Weather.App", "Microsourcing.SportChamps.Weather.App\Microsourcing.SportChamps.Weather.App.csproj", "{513ED75D-2BF2-49A8-B291-0A3FBCAF1814}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsourcing.SportChamps.Weather.Common", "Microsourcing.SportChamps.Weather.Common\Microsourcing.SportChamps.Weather.Common.csproj", "{D1366244-CC3A-4B29-93F7-80E86C3D6C8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsourcing.SportChamps.Weather.Data", "Microsourcing.SportChamps.Weather.Data\Microsourcing.SportChamps.Weather.Data.csproj", "{CA3F693B-E076-4863-9518-25DA69F6DB29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsourcing.SportChamps.Weather.Model", "Microsourcing.SportChamps.Weather.Model\Microsourcing.SportChamps.Weather.Model.csproj", "{3C991317-005A-42AA-9F64-065FE3E45480}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsourcing.SportChamps.Weather.Service", "Microsourcing.SportChamps.Weather.Service\Microsourcing.SportChamps.Weather.Service.csproj", "{08E540DC-D10C-4E6D-8DC9-C944224A7CD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsourcing.SportChamps.Weather.Api", "Microsourcing.SportChamps.Weather.Api\Microsourcing.SportChamps.Weather.Api.csproj", "{48CB9EBE-AAEF-4795-BB11-07EAAF581053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{513ED75D-2BF2-49A8-B291-0A3FBCAF1814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513ED75D-2BF2-49A8-B291-0A3FBCAF1814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513ED75D-2BF2-49A8-B291-0A3FBCAF1814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513ED75D-2BF2-49A8-B291-0A3FBCAF1814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1366244-CC3A-4B29-93F7-80E86C3D6C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1366244-CC3A-4B29-93F7-80E86C3D6C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1366244-CC3A-4B29-93F7-80E86C3D6C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1366244-CC3A-4B29-93F7-80E86C3D6C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3F693B-E076-4863-9518-25DA69F6DB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3F693B-E076-4863-9518-25DA69F6DB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3F693B-E076-4863-9518-25DA69F6DB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3F693B-E076-4863-9518-25DA69F6DB29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C991317-005A-42AA-9F64-065FE3E45480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C991317-005A-42AA-9F64-065FE3E45480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C991317-005A-42AA-9F64-065FE3E45480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C991317-005A-42AA-9F64-065FE3E45480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E540DC-D10C-4E6D-8DC9-C944224A7CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E540DC-D10C-4E6D-8DC9-C944224A7CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E540DC-D10C-4E6D-8DC9-C944224A7CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E540DC-D10C-4E6D-8DC9-C944224A7CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48CB9EBE-AAEF-4795-BB11-07EAAF581053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CB9EBE-AAEF-4795-BB11-07EAAF581053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CB9EBE-AAEF-4795-BB11-07EAAF581053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CB9EBE-AAEF-4795-BB11-07EAAF581053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69EF6A17-D12F-4F90-9D6B-1809C81125C9}
+	EndGlobalSection
+EndGlobal

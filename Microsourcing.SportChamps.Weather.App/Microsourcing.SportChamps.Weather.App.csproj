@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.20" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsourcing.SportChamps.Weather.Api\Microsourcing.SportChamps.Weather.Api.csproj" />
+    <ProjectReference Include="..\Microsourcing.SportChamps.Weather.Common\Microsourcing.SportChamps.Weather.Common.csproj" />
+    <ProjectReference Include="..\Microsourcing.SportChamps.Weather.Model\Microsourcing.SportChamps.Weather.Model.csproj" />
+    <ProjectReference Include="..\Microsourcing.SportChamps.Weather.Service\Microsourcing.SportChamps.Weather.Service.csproj" />
+  </ItemGroup>
+
+</Project>
